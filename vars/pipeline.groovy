@@ -1,10 +1,7 @@
-def buildTag = "build-${env.BUILD_NUMBER}"
-                    tagBuild(buildTag, "Tagging build number ${env.BUILD_NUMBER}")
-
 @Library('my-shared-library@main') _
 
 pipeline {
-    agent { label 'slave' }
+    agent { label 'slave1' }
 
     environment {
         JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
@@ -65,5 +62,8 @@ def call() {
         }
     }
  }
+
+#def buildTag = "build-${env.BUILD_NUMBER}"
+                    tagBuild(buildTag, "Tagging build number ${env.BUILD_NUMBER}")
 
 
