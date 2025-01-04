@@ -63,7 +63,6 @@ def call() {
     }
  }
 
-#def buildTag = "build-${env.BUILD_NUMBER}"
-                    tagBuild(buildTag, "Tagging build number ${env.BUILD_NUMBER}")
+
 
 
